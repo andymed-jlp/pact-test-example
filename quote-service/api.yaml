@@ -1,0 +1,31 @@
+openapi: 3.0.3
+info:
+  title: Quote API
+  description: Gives you inspiring quoutes
+  version: 1.0.0
+paths:
+  /quote:
+    get:
+      summary: Gets a list of quotes
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/quote'
+components:
+  schemas:
+    quote:
+      type: object
+      properties:
+        text:
+          description: The quote as a plain text string
+          type: string
+          example: Too many cooks spoil the broth
+        author:
+          description: Name of the person who said or wrote the quote
+          type: string
+          example: William Shakespeare

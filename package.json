@@ -1,0 +1,20 @@
+{
+  "name": "pact-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mock.js",
+  "dependencies": {
+    "@pact-foundation/pact": "^9.16.0",
+    "@pact-foundation/pact-core": "^11.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "pact-tests-consumer": "NODE_PATH=./ jest quote-app/src",
+    "pact-tests-provider": "NODE_PATH=./ jest quote-service/src",
+    "start-mock": "node start-mock",
+    "start-service": "cd quote-service; npm start",
+    "start-app": "cd quote-app; npm start"
+  },
+  "author": "Andy Medlicott",
+  "license": "ISC"
+}
